@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día del Amor y la Amistad</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('https://img.freepik.com/vector-gratis/corazones-blancos-dibujados-mano-sobre-fondo-rojo_78370-2979.jpg?t=st=1739510821~exp=1739514421~hmac=0f18e48def5bf0b8a1ebc791666a0e61832d2219f542f711b25a16bdd2591b9a&w=1800') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 50px;
+            margin-top: 20px;
+            color: black;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 5px white;
+        }
+        #gif-container {
+            margin: 20px auto;
+        }
+        #message {
+            font-size: 20px;
+            width: 80%;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .heart {
+            position: fixed;
+            color: red;
+            font-size: 30px;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            from { transform: translateY(-100px); opacity: 1; }
+            to { transform: translateY(100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Un mensaje especial para ti</h1>
+    <div id="gif-container">
+        <img src="https://gifdb.com/images/high/feliz-dia-del-amor-y-la-amistad-498-x-498-gif-g2r6h3rkbtggy5jz.webp" alt="Love GIF">
+    </div>
+    <div id="message">
+   ✨💖 ¡Feliz 14 de febrero! 💖✨ <br>
+💖Que este día esté lleno de momentos especiales, sonrisas y detalles que alegren tu corazón.<br>
+💝 No importa cómo lo celebres, lo importante es disfrutar y recordar lo bonito que es recibir y dar cariño.<br>
+Espero que tengas un día increíble, lleno de felicidad y buenos deseos. <br>
+🌸💫¡Que este 14 de febrero sea tan especial como tú! 💕😊"
+    </div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
