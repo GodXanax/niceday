@@ -13,24 +13,37 @@
             font-family: Arial, sans-serif;
             color: white;
             overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
-            font-size: 50px;
-            margin-top: 20px;
+            font-size: 3rem; /* Tamaño relativo */
+            margin: 20px 10px;
             color: black;
             font-family: 'Brush Script MT', cursive;
             text-shadow: 2px 2px 5px white;
         }
         #gif-container {
             margin: 20px auto;
+            max-width: 100%;
+        }
+        #gif-container img {
+            width: 100%;
+            max-width: 300px; /* Ajusta el tamaño del GIF */
+            height: auto;
         }
         #message {
-            font-size: 20px;
-            width: 80%;
+            font-size: 1.2rem; /* Tamaño relativo */
+            width: 90%; /* Ancho adaptable */
+            max-width: 600px; /* Límite máximo para pantallas grandes */
             margin: 20px auto;
             background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
+            line-height: 1.6;
         }
         .heart {
             position: fixed;
@@ -42,6 +55,11 @@
             from { transform: translateY(-100px); opacity: 1; }
             to { transform: translateY(100vh); opacity: 0; }
         }
+        .watermark {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
     </style>
 </head>
 <body>
@@ -50,11 +68,11 @@
         <img src="https://gifdb.com/images/high/feliz-dia-del-amor-y-la-amistad-498-x-498-gif-g2r6h3rkbtggy5jz.webp" alt="Love GIF">
     </div>
     <div id="message">
-   ✨💖 ¡Feliz 14 de febrero! 💖✨ <br>
-💖Que este día esté lleno de momentos especiales, sonrisas y detalles que alegren tu corazón.<br>
-💝 No importa cómo lo celebres, lo importante es disfrutar y recordar lo bonito que es recibir y dar cariño.<br>
-Espero que tengas un día increíble, lleno de felicidad y buenos deseos. <br>
-🌸💫¡Que este 14 de febrero sea tan especial como tú! 💕😊"
+        ✨💖 ¡Feliz 14 de febrero! 💖✨ <br>
+        💖 Que este día esté lleno de momentos especiales, sonrisas y detalles que alegren tu corazón.<br>
+        💝 No importa cómo lo celebres, lo importante es disfrutar y recordar lo bonito que es recibir y dar cariño.<br>
+        Espero que tengas un día increíble, lleno de felicidad y buenos deseos. <br>
+        🌸💫 ¡Que este 14 de febrero sea tan especial como tú! 💕😊
     </div>
     <div class="watermark">By Ale</div>
     <script>
